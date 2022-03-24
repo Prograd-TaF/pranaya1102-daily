@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  font-family: "Lucida Handwriting", cursive;
+  font-weight: bold;
+}
+/* Fill your code*/
+.header {
+  background-color: rgb(63, 49, 49);
+  height: 90px;
+  width: auto;
+}
+.middle {
+  height: 580px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(160, 115, 202);
+  position: relative;
+}
+.footer {
+  height: 150px;
+  background-color: rgb(37, 28, 28);
+  display: flex;
+  width: auto;
+}
+.button_cake {
+  display: inline;
+  padding: 5px;
+  background-color: rgb(160, 115, 202);
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 4px;
+  margin: 60px;
+}
+.btn {
+  border: 3px solid grey;
+  height: 40px;
+  width: 50px;
+  margin: auto;
+  background-color: yellowgreen;
+}
+.footer > ul {
+  margin: auto;
+}
+#layer1 {
+  width: 245px;
+  /* visibility: hidden; */
+  background-color: orange;
+  border-radius: 5px;
+}
+
+#layer2 {
+  width: 200px;
+  left: 40px;
+  /* visibility: hidden; */
+  background-color: rgb(99, 68, 128);
+  border-radius: 5px;
+}
+
+#layer3 {
+  width: 160px;
+  left: 60px;
+  /* visibility: hidden; */
+  background-color: rgb(173, 73, 66);
+  border-radius: 5px;
+}
+
+#layer4 {
+  width: 120px;
+  left: 80px;
+  /* visibility: hidden; */
+  background-color: rgb(59, 54, 122);
+  border-radius: 5px;
+}
+
+#layer5 {
+  width: 80px;
+  left: 100px;
+  /* visibility: hidden; */
+  background-color: rgb(255, 0, 0);
+  border-radius: 5px;
+}
+.mid_ch {
+  width: 250px;
+  height: 240px;
+  margin: auto;
+  border-style: dashed;
+  border-radius: 5px;
+  line-height: 20px;
+  text-align: center;
+}
+#cake {
+  width: 250px;
+  height: 240px;
+  margin: auto;
+
+  border-radius: 5px;
+  line-height: 20px;
+}
+#cake_list {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+#total {
+  bottom: 20px;
+}
+#bill {
+  height: 240px;
+}
+li {
+  list-style: none;
+  line-height: 30px;
+}
+
+ul {
+  list-style-type: none;
+  color: white;
+}
+li {
+  text-align: center;
+}

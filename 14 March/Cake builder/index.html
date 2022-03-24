@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="middle">
+            <img src="./assets/cake.png" style="position: absolute; top: -80px;left: 44%; height: 200px;width: 200px;border-radius: 100px;background-color: black;">
+            <h4 style="position: absolute;left: 48%;top:90px;color:white;"> Cake World</h4>
+            <div class="mid_ch" id="price">
+                
+                <h3>PRICES</h3><br>
+                <ul>
+                    <li >Chocolate  -------- 300</li>
+                    <li >Strawberry  ------- 100</li>
+                    <li >Butterscotch  ----- 200 </li>
+                    <li >Vanilla ------------ 250</li>
+                    <li >RedVelvet -------- 100</li>
+                    
+                </ul>
+            </div>
+            <div  id="cake">
+                <ul id="cake_list">
+                    <li id="layer5"></li>
+                    <li id="layer4"></li>
+                    <li id="layer3"></li>
+                    <li id="layer2"></li>
+                    <li id="layer1"></li>
+                    
+                </ul>
+            </div>
+            <div class="mid_ch" id="bill">
+                <h3>BILL</h3><br>
+                <ul id="items">
+                    
+                    
+                </ul>
+                <br>
+                <p id="total"></p>
+            </div>
+        </div>
+        <div class="footer">
+            <ul >
+                <li class="button_cake" onclick="add_item(1)">Chocolate</li>
+                <li class="button_cake" onclick="add_item(2)">Strawberry</li>
+                <li class="button_cake" onclick="add_item(3)">Butterscotch</li>
+                <li class="button_cake" onclick="add_item(4)">Vanilla</li>
+                <li class="button_cake" onclick="add_item(5)">RedVelvet</li>
+                <button type="submit" onclick="Buy()"class="btn">BUY</button>
+                
+            </ul>
+        </div>
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>
