@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Web Server</h1>
+    <p id="q1"></p>
+    <p id="q2"></p>
+    <p id="q3"></p>
+    <script>
+        const ws = new WebSocket("ws://localhost:8000")
+        ws.addEventListener("open",()=>{
+            console.log("client connected");
+            ws.send("Hey WebSocket");
+        })
+        ws.onmessage=function (m){
+            console.log(m.data);
+            var obj = JSON.parse(m.data);
+            console.log(m.data.name);
+
+            document.getElementById("q1").innerHTML= obj.name;
+            document.getElementById("q2").innerHTML= obj.age;
+            document.getElementById("q3").innerHTML= obj.company;
+        }
+    </script> 
+</body>
+</html>
