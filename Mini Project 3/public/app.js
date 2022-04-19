@@ -35,6 +35,7 @@ if (sessionStorage.length !== 0) {
 function popupform(){
   getElementById("container").hidden=true;
  getElementById("container2").hidden=false;
+ getElementById("form1").hidden = false;
  
 
 }

@@ -70,7 +70,7 @@ function loginUser() {
     console.log(storedUserPassword);
     if (password === storedUserPassword) {
       console.log("credentials matched");
-      location.href = "http://localhost:8081/index";
+      location.href = "http://localhost:8081/home";
       const userData = localStorage.getItem(username);
       sessionStorage.setItem("user", userData);
     } else {

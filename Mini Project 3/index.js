@@ -18,7 +18,7 @@ var corsOptions = {
 app.use(express.static("./public"));
 app.listen(8081);
 
-app.get("/Signup",(req,res)=>{
+app.get("/",(req,res)=>{
     res.sendFile(path.join(__dirname,'./public/Signup.html'));
 });
 
@@ -26,8 +26,8 @@ app.get("/login",(req,res)=>{
     res.sendFile(path.join(__dirname,'./public/login.html'));
 });
 
-app.get("/index",(req,res)=>{
-    res.sendFile(path.join(__dirname,'./public/index.html'));
+app.get("/home",(req,res)=>{
+    res.sendFile(path.join(__dirname,'./public/home.html'));
 });
  //  Retrieving the data from db
 app.get("/show-feedbacks", async (req, res, next) => {
