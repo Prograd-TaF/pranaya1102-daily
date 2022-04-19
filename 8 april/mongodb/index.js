@@ -11,12 +11,12 @@ const mongoClient = mongodb.MongoClient;
 app.use(express.json());
 
 const dburl =
-  "mongodb+srv://prabhat510:Prabhat123@cluster0.h16ts.mongodb.net/sample_db?retryWrites=true&w=majority";
+"mongodb+srv://admin:pranaya123@cluster0.swxw9.mongodb.net/MyDatabase?retryWrites=true&w=majority"
 
 app.get("/", async (req, res) => {
   const client = await mongoClient.connect(dburl);
   try {
-    const db = await client.db("sample_db");
+    const db = await client.db("MyDatabase");
     const users = await db.collection("users").find().toArray();
     res.json({ message: "display data", users });
   } catch (error) {
@@ -29,7 +29,7 @@ app.get("/user/:userId", async (req, res) => {
   const { userId } = req.params;
   const client = await mongoClient.connect(dburl);
   try {
-    const db = await client.db("sample_db");
+    const db = await client.db("MyDatabase");
     const user = await db
       .collection("users")
       .findOne({ _id: new mongodb.ObjectId(userId) });
@@ -43,7 +43,7 @@ app.get("/user/:userId", async (req, res) => {
 app.post("/add-user", async (req, res) => {
   const client = await mongoClient.connect(dburl);
   try {
-    const db = await client.db("sample_db");
+    const db = await client.db("MyDatabase");
     const user = await db.collection("users").insertOne(req.body);
     res.json({ message: "user created", user });
   } catch (error) {
@@ -56,7 +56,7 @@ app.put("/user/:userId/edit", async (req, res) => {
   const { userId } = req.params;
   const client = await mongoClient.connect(dburl);
   try {
-    const db = await client.db("sample_db");
+    const db = await client.db("MyDatabase");
     const user = await db
       .collection("users")
       .updateOne({ _id: new mongodb.ObjectId(userId) }, { $set: { age: 22 } });
@@ -71,7 +71,7 @@ app.delete("/user/:userId/delete", async (req, res) => {
   const { userId } = req.params;
   const client = await mongoClient.connect(dburl);
   try {
-    const db = await client.db("sample_db");
+    const db = await client.db("MyDatabase");
     const user = await db
       .collection("users")
       .deleteOne({ _id: new mongodb.ObjectId(userId) });
